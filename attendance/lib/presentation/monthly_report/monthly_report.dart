@@ -59,9 +59,9 @@ class MonthlyReport extends StatelessWidget {
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
                     return ListTile(
-                      titleTextStyle: const TextStyle(
+                      titleTextStyle: TextStyle(
                         fontWeight: FontWeight.normal,
-                        fontSize: 12,
+                        fontSize: size.width / 28,
                       ),
                       title: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
