@@ -1,4 +1,6 @@
+import 'package:attendance/presentation/home/home.dart';
 import 'package:attendance/presentation/monthly_report/monthly_report.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,10 +14,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(),
+
+      theme: ThemeData(
+     
+      ),
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.system,
-      home: const MonthlyReport(),
+      debugShowCheckedModeBanner: false,
+      home:  HomeScreen(),
+
     );
   }
 }
