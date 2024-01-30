@@ -1,4 +1,4 @@
-import 'package:attendance/presentation/authentication/auth.dart';
+import 'package:attendance/presentation/authentication/login/login.dart';
 
 import 'package:flutter/material.dart';
 
