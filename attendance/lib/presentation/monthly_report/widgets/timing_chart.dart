@@ -12,7 +12,7 @@ class MonthlyTimings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 10,
+      itemCount: 5,
       shrinkWrap: true,
       itemBuilder: (context, index) {
         return ListTile(
