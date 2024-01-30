@@ -12,12 +12,15 @@ class MonthlyTimings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 5,
+      itemCount: 15,
       shrinkWrap: true,
       itemBuilder: (context, index) {
         return ListTile(
           titleTextStyle: TextStyle(
             fontWeight: FontWeight.normal,
+            color: Theme.of(context).brightness == Brightness.dark
+                ? Colors.white
+                : Colors.black,
             fontSize: size.width / 28,
           ),
           title: Row(
@@ -32,21 +35,36 @@ class MonthlyTimings extends StatelessWidget {
               ),
               Column(
                 children: [
-                  const Text('Check-in'),
+                  Text(
+                    'Check-in',
+                    style: TextStyle(
+                      fontSize: size.width / 32,
+                      color: Colors.grey,
+                    ),
+                  ),
                   height(5),
                   const Text('10 am'),
                 ],
               ),
               Column(
                 children: [
-                  const Text('Check-out'),
+                  Text(
+                    'Check-out',
+                    style: TextStyle(
+                      fontSize: size.width / 32,
+                      color: Colors.grey,
+                    ),
+                  ),
                   height(5),
                   const Text('7 pm'),
                 ],
               ),
               Column(
                 children: [
-                  const Text('Check-out'),
+                   Text('Remarks', style: TextStyle(
+                      fontSize: size.width / 32,
+                      color: Colors.grey,
+                    ),),
                   height(5),
                   const Text('7 pm'),
                 ],
