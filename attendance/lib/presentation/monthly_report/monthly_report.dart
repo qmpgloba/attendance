@@ -1,6 +1,5 @@
 import 'package:attendance/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class MonthlyReport extends StatelessWidget {
   const MonthlyReport({super.key});
@@ -59,8 +58,8 @@ class MonthlyReport extends StatelessWidget {
                   itemCount: 10,
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    return const ListTile(
-                      titleTextStyle: TextStyle(
+                    return ListTile(
+                      titleTextStyle: const TextStyle(
                         fontWeight: FontWeight.normal,
                         fontSize: 12,
                       ),
@@ -69,26 +68,30 @@ class MonthlyReport extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Text('Mon'),
-                              Text('29 Jan'),
+                              const Text('Mon'),
+                              height(5),
+                              const Text('29 Jan'),
                             ],
                           ),
                           Column(
                             children: [
-                              Text('Check-in'),
-                              Text('10 am'),
+                              const Text('Check-in'),
+                              height(5),
+                              const Text('10 am'),
                             ],
                           ),
                           Column(
                             children: [
-                              Text('Check-out'),
-                              Text('7 pm'),
+                              const Text('Check-out'),
+                              height(5),
+                              const Text('7 pm'),
                             ],
                           ),
                           Column(
                             children: [
-                              Text('Check-out'),
-                              Text('7 pm'),
+                              const Text('Check-out'),
+                              height(5),
+                              const Text('7 pm'),
                             ],
                           ),
                         ],
@@ -103,6 +106,4 @@ class MonthlyReport extends StatelessWidget {
       )),
     );
   }
-
-  
 }
