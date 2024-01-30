@@ -4,6 +4,6 @@ import 'package:attendance/presentation/profile/profile_screen.dart';
 
 final screens = [
   HomeScreen(),
-  MonthlyReport(),
-  ProfileScreen(),
+  const MonthlyReport(),
+  const ProfileScreen(),
 ];
