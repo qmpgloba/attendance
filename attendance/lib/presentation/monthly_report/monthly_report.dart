@@ -1,3 +1,4 @@
+import 'package:attendance/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -44,9 +45,7 @@ class MonthlyReport extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              height(10),
               const Text('26 days has passed in'),
               const Text(
                 'June',
@@ -63,7 +62,7 @@ class MonthlyReport extends StatelessWidget {
                     return const ListTile(
                       titleTextStyle: TextStyle(
                         fontWeight: FontWeight.normal,
-                        fontSize: 14,
+                        fontSize: 12,
                       ),
                       title: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -104,4 +103,6 @@ class MonthlyReport extends StatelessWidget {
       )),
     );
   }
+
+  
 }
