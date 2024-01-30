@@ -29,6 +29,12 @@ class Authentication extends StatelessWidget {
                     ),
                   ),
                   height(10),
+                  Image.asset(
+                    'assets/images/login.png',
+                    height: size.height / 4,
+                    width: size.width / 2,
+                    fit: BoxFit.cover,
+                  ),
                   AuthBox(
                     controller: emailController,
                     obscureText: false,
