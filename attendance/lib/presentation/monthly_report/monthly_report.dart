@@ -20,52 +20,57 @@ class MonthlyReport extends StatelessWidget {
           right: size.width / 16,
           top: size.width / 16,
         ),
-        child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              RichText(
-                text: const TextSpan(
+        child: NestedScrollView(
+          headerSliverBuilder: (context, innerBoxIsScrolled) => [
+            SliverToBoxAdapter(
+              child: Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    TextSpan(
-                      text: '97%  ',
-                      style: TextStyle(
-                        fontStyle: FontStyle.italic,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 26,
+                    RichText(
+                      text: const TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '97%  ',
+                            style: TextStyle(
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 26,
+                            ),
+                          ),
+                          TextSpan(
+                            text: 'Attendance',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    TextSpan(
-                      text: 'Attendance',
+                    height(10),
+                    const Text('26 days has passed in'),
+                    const Text(
+                      'June',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 20,
                       ),
                     ),
+                    height(10),
+                    Container(
+                      height: 200,
+                      color: Colors.amber,
+                    ),
+                    height(10),
                   ],
                 ),
               ),
-              height(10),
-              const Text('26 days has passed in'),
-              const Text(
-                'June',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-              ),
-              height(10),
-              Container(
-                height: 200,
-                color: Colors.amber,
-              ),
-              height(10),
-              MonthlyTimings(size: size)
-            ],
-          ),
+            ),
+          ],
+          body: MonthlyTimings(size: size),
         ),
       )),
     );
   }
 }
-
