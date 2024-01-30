@@ -1,12 +1,15 @@
 import 'package:attendance/presentation/monthly_report/widgets/timing_chart.dart';
 import 'package:attendance/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class MonthlyReport extends StatelessWidget {
   const MonthlyReport({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var month = DateFormat('MMMM').format(DateTime.now());
+
     Size size = MediaQuery.sizeOf(context);
     return Scaffold(
       appBar: AppBar(
@@ -63,6 +66,19 @@ class MonthlyReport extends StatelessWidget {
                       color: Colors.amber,
                     ),
                     height(10),
+                    SizedBox(
+                      width: size.width,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          showDatePicker(
+                            context: context,
+                            firstDate: DateTime(2000, 5),
+                            lastDate: DateTime(2050, 5),
+                          );
+                        },
+                        child: Text(month),
+                      ),
+                    ),
                   ],
                 ),
               ),
