@@ -4,8 +4,8 @@ import 'package:attendance/presentation/authentication/widgets/auth_box.dart';
 import 'package:attendance/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-class Authentication extends StatelessWidget {
-  Authentication({super.key});
+class LoginScreen extends StatelessWidget {
+  LoginScreen({super.key});
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
