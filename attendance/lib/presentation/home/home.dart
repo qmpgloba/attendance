@@ -40,12 +40,12 @@ class HomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CheckedTimeWidget(size: size, title: 'Check In', time: '10:12 am'),
-                  CheckedTimeWidget(size: size, title: 'Check Out', time: '07:12 pm'),
-                  
-                 
+                  CheckedTimeWidget(
+                      size: size, title: 'Check In', time: '10:12 am'),
+                  CheckedTimeWidget(
+                      size: size, title: 'Check Out', time: '07:12 pm'),
                 ],
-              )
+              ),
             ],
           ),
         ),
@@ -53,4 +53,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
