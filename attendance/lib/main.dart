@@ -1,8 +1,6 @@
 
 import 'package:attendance/presentation/base/base_Screen.dart';
 
-import 'package:attendance/presentation/authentication/login/login.dart';
-import 'package:attendance/presentation/authentication/signup/signup.dart';
 
 
 import 'package:flutter/material.dart';
