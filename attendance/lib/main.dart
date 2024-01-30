@@ -1,3 +1,4 @@
+import 'package:attendance/presentation/base/base_Screen.dart';
 import 'package:attendance/presentation/home/home.dart';
 import 'package:attendance/presentation/monthly_report/monthly_report.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
-      home:  HomeScreen(),
+      home:  BaseScreen(),
 
     );
   }
