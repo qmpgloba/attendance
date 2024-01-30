@@ -17,35 +17,50 @@ class Authentication extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(size.width / 16),
           child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'LOGIN',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: size.width / 14,
-                  ),
-                ),
-                height(10),
-                AuthBox(controller: emailController, obscureText: false, label: 'Email'),
-                height(20),
-                AuthBox(controller: passwordController, obscureText: true, label: 'Password'),
-                height(20),
-                SizedBox(
-                  width: size.width,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      'LOGIN',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: size.width / 20,
-                      ),
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'LOGIN',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: size.width / 14,
                     ),
                   ),
-                )
-              ],
+                  height(10),
+                  AuthBox(
+                    controller: emailController,
+                    obscureText: false,
+                    label: 'Email',
+                  ),
+                  height(20),
+                  AuthBox(
+                    controller: passwordController,
+                    obscureText: true,
+                    label: 'Password',
+                  ),
+                  height(20),
+                  SizedBox(
+                    width: size.width,
+                    child: ElevatedButton(
+                      style: const ButtonStyle(
+                        backgroundColor:
+                            MaterialStatePropertyAll(Colors.purple),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'LOGIN',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: size.width / 20,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),
@@ -53,5 +68,3 @@ class Authentication extends StatelessWidget {
     );
   }
 }
-
-

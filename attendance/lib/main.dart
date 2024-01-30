@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
-      home:  Authentication(),
+      home: Authentication(),
     );
   }
 }
