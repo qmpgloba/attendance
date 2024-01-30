@@ -1,3 +1,4 @@
+import 'package:attendance/presentation/monthly_report/widgets/timing_chart.dart';
 import 'package:attendance/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -53,53 +54,13 @@ class MonthlyReport extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: 10,
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      titleTextStyle: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: size.width / 28,
-                      ),
-                      title: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            children: [
-                              const Text('Mon'),
-                              height(5),
-                              const Text('29 Jan'),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              const Text('Check-in'),
-                              height(5),
-                              const Text('10 am'),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              const Text('Check-out'),
-                              height(5),
-                              const Text('7 pm'),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              const Text('Check-out'),
-                              height(5),
-                              const Text('7 pm'),
-                            ],
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                ),
-              )
+              height(10),
+              Container(
+                height: 200,
+                color: Colors.amber,
+              ),
+              height(10),
+              MonthlyTimings(size: size)
             ],
           ),
         ),
@@ -107,3 +68,4 @@ class MonthlyReport extends StatelessWidget {
     );
   }
 }
+
