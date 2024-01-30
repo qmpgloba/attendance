@@ -1,6 +1,5 @@
 import 'package:attendance/presentation/base/base_Screen.dart';
 import 'package:attendance/presentation/home/home.dart';
-import 'package:attendance/presentation/monthly_report/monthly_report.dart';
 
 import 'package:flutter/material.dart';
 
@@ -14,16 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-
-      theme: ThemeData(
-     
-      ),
+      theme: ThemeData(),
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       home:  BaseScreen(),
-
     );
   }
 }
