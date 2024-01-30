@@ -15,12 +15,14 @@ class _BaseScreenState extends State<BaseScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        // elevation: 1,
+        elevation: 0.2,
           // fixedColor: kWhiteColor,
+          
           unselectedItemColor: Colors.white,
           selectedItemColor: Colors.purple,
           currentIndex: _currentIndex,
           backgroundColor: Colors.black38,
+
           onTap: (value) {
             setState(() {
               _currentIndex = value;
@@ -32,9 +34,9 @@ class _BaseScreenState extends State<BaseScreen> {
                   Icons.home,
                 ),
                 label: '\u2022'),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: '\u2022'),
-            // BottomNavigationBarItem(
-            //     icon: Icon(Icons.add_box_outlined), label: '\u2022'),
+            BottomNavigationBarItem(icon: Icon(Icons.calendar_month), label: '\u2022'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.person), label: '\u2022'),
             // BottomNavigationBarItem(
             //     icon: Icon(Icons.notifications_none), label: '\u2022'),
             // BottomNavigationBarItem(icon: Icon(Icons.person), label: '\u2022')
