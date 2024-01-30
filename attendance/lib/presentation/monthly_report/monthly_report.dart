@@ -17,6 +17,7 @@ class MonthlyReport extends StatelessWidget {
         title: const Text('MonthlyReport'),
         centerTitle: true,
       ),
+
       body: Padding(
               padding: EdgeInsets.only(
       left: size.width / 16,
@@ -87,6 +88,7 @@ class MonthlyReport extends StatelessWidget {
        MonthlyTimings(size: size),
               ),
             ),
+
     );
   }
 }
